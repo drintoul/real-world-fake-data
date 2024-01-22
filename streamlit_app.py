@@ -15,6 +15,11 @@ def main():
 
 	fake = Faker()
 
+	cols = st.slider('Enter number of columns desired', 1, 10, 1)
+	
+	for _ in range(cols):
+		st.selectbox(f'Enter data type for column {_}', ['Birthdate', 'SSN', 'Address', 'Name'])
+	
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 
 	columns=['Name', 'Address', 'Birthdate', 'SIN', 'IP Address']
