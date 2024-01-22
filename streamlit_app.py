@@ -32,7 +32,7 @@ def main():
 				val = data[col]
 				st.write(val)
 				dict[key] = val
-				data = pd.DataFrame.from_dict(dict)
+				data = pd.DataFrame(dict)
 
 			df = pd.concat([df, data], axis=0)
 
