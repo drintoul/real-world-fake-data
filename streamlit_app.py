@@ -20,12 +20,14 @@ def main():
 	coltypes = []
 
 	for n in range(cols):
-		
+
+		st.write(f'Column {n+1}')
+
 		col1, col2 = st.columns(2)
 		with col1:
-			colname = st.text_input(f'Enter column name for column {n+1}')
+			colname = st.text_input('Column name')
 		with col2:
-			coltype = st.selectbox(f'Enter data type for column {n+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
+			coltype = st.selectbox('Data type', ['Birthdate', 'SSN', 'Address', 'Name'])
 
 		coltypes.append(coltype)
 
