@@ -4,17 +4,18 @@ import pandas as pd
 
 st.set_page_config(page_title="Real World Fake Data")
 st.title('Real World Fake Data')
-st.subheader('Generate Fake data in CSV')
+
+col1, col2 = st.columns(2)
+with col1:
+	st.subheader('Generate Fake data in CSV')
+with col2:
+	st.button('Reset')
 
 def main():
 
 	fake = Faker()
 
-	col1, col2 = st.columns(2)
-	with col1:
-		st.button('Reset')
-	with col2:
-		rows = st.slider('Enter number of rows desired', 1, 25, 1)
+	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 	
 	df = pd.DataFrame()
 	df.columns = ['Name', 'Address', 'Birthdate']
