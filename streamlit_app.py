@@ -12,7 +12,7 @@ def main():
 
 	col1, col2 = st.columns(2)
 	with col1:
-		st.write('Reset')
+		st.button('Reset')
 	with col2:
 		rows = st.slider('Enter number of rows desired', 1, 25, 1)
 	
