@@ -19,8 +19,8 @@ def main():
 
 	coltypes = []
 
-	for _ in range(cols):
-		coltypes[_] = st.selectbox(f'Enter data type for column {_+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
+	for n in range(cols):
+		coltypes[n] = st.selectbox(f'Enter data type for column {_+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
 
 	st.write(coltypes)
 
