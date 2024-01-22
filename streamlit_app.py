@@ -1,6 +1,7 @@
 import streamlit as st
 from faker import Faker
 import pandas as pd
+import numpy as np
 
 st.set_page_config(page_title="Real World Fake Data")
 st.title('Real World Fake Data')
@@ -11,32 +12,26 @@ with col1:
 with col2:
 	st.button('Reset')
 
+def create_matrix(rows, columns):
+    matrix = np.zeros((rows, columns))
+    for i in range(rows):
+        for j in range(columns):
+            matrix[i][j] = st.number_input(f"Enter value for cell ({i+1}, {j+1})", key=f"{i}_{j}")
+    return matrix
+
 def main():
+    st.title("Matrix Input App")
 
-	fake = Faker()
+    # Get number of rows and columns from user
+    rows = st.number_input("Enter number of rows", min_value=1, step=1)
+    columns = st.number_input("Enter number of columns", min_value=1, step=1)
 
-	cols = st.slider('Enter number of columns desired', 1, 10, 1)
+    # Create matrix input form
+    matrix = create_matrix(rows, columns)
 
-	coltypes = {}
+    # Display the input matrix
+    st.table(matrix)
 
-	for _ in range(cols):
-
-		st.write(f'Column {_+1}')
-
-		col1, col2 = st.columns(2)
-		with col1:
-			colname = st.text_input('Column name')
-		with col2:
-			coltype = st.selectbox('Data type', ['Birthdate', 'SSN', 'Address', 'Name'])
-
-		coltypes[colname] = coltype
-
-	st.write(coltypes)
-
-	rows = st.slider('Enter number of rows desired', 1, 25, 1)
-
-	st.write(rows)
-							 
 if __name__ == '__main__':
 	
 	main()	
