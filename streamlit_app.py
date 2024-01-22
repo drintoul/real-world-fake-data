@@ -32,8 +32,9 @@ def main():
 				val = data[col]
 				st.write(val)
 				dict[key] = val
+				data = pd.DataFrame.from_dict(dict)
 
-			df = df.append(dict, ignore_index=True)
+			df = pd.concat([df, data], ignore_index=True)
 
 	st.dataframe(df) #, hide_index=True)
 
