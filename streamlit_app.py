@@ -16,33 +16,17 @@ def main():
 	fake = Faker()
 
 	cols = st.slider('Enter number of columns desired', 1, 10, 1)
-	
+
+	coltypes = []
+
 	for _ in range(cols):
-		st.selectbox(f'Enter data type for column {_+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
-	
+		coltypes[_] = st.selectbox(f'Enter data type for column {_+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
+
+	st.write(coltypes)
+
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 
-	columns=['Name', 'Address', 'Birthdate', 'SIN', 'IP Address']
-	df = pd.DataFrame(columns=columns)
-
-	if rows > 1:
-		for _ in range(rows):
-
-			dict = {}
-			data = [fake.name(), fake.address(), fake.date(), fake.ssn(), fake.ipv4_private()]
-
-			for col in range(len(columns)):
-				key = columns[col]
-				st.write(key)
-				val = data[col]
-				st.write(val)
-				dict[key] = val
-				data = pd.DataFrame(dict)
-
-			df = pd.concat([df, data], axis=0)
-
-	st.dataframe(df) #, hide_index=True)
-
+	st.write(rows)
 							 
 if __name__ == '__main__':
 	
