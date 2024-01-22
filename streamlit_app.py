@@ -27,7 +27,9 @@ def main():
 
 			for col in range(len(columns)):
 				key = columns[col]
+				st.write(key)
 				val = data[col]
+				st.write(val)
 				dict[key] = val
 
 			df = pd.append(dict, ignore_index=True)
