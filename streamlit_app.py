@@ -17,7 +17,7 @@ def main():
 
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 
-	df = pd.DataFrame(columns=['Name', 'Address', 'Birthdate', 'Phone')
+	df = pd.DataFrame(columns=['Name', 'Address', 'Birthdate', 'Phone'])
 
 	if rows > 1:
 		for _ in range(rows):
