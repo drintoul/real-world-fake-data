@@ -17,11 +17,11 @@ def main():
 
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 
-	df = pd.DataFrame()
+	df = pd.DataFrame(columns=['Name', 'Address', 'Birthdate', 'Phone')
 
 	if rows > 1:
 		for _ in range(rows):
-			data = (fake.name(), fake.address(), fake.date())
+			data = (fake.name(), fake.address(), fake.date(), fake.phone())
 			row = pd.DataFrame(data)
 			st.dataframe(row)
 			df = pd.concat([df, row], axis=0)
