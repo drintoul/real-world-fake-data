@@ -22,10 +22,12 @@ def main():
 
 	if rows > 1:
 		for _ in range(rows):
-			df.append(, ignore_index=True)
+
 			data = [fake.name(), fake.address(), fake.date(), fake.ssn(), fake.ipv4_private()]
+
 			for _ in range(len(columns)):
 				dict[columns[_] = data[_]
+
 			df = pd.append(dict, ignore_index=True)
 
 	st.dataframe(df) #, hide_index=True)
