@@ -14,7 +14,7 @@ def main():
 
 	if rows > 1:
 		for _ in range(rows):
-			st.write(fake.name(), '\t', fake.address())
+			st.write(fake.name(), '\t', fake.address(), '\t', fake.date())
 
 if __name__ == '__main__':
 	
