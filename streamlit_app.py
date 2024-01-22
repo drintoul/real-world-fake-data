@@ -33,7 +33,7 @@ def main():
 				st.write(val)
 				dict[key] = val
 
-			df = pd.append(dict, ignore_index=True)
+			df = df.append(dict, ignore_index=True)
 
 	st.dataframe(df) #, hide_index=True)
 
