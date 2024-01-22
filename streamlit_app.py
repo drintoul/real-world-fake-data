@@ -8,10 +8,14 @@ st.subheader('Generate Fake data in CSV')
 
 def main():
 
-	rows = st.slider('Enter number of rows desired', 1, 25, 1)
-
 	fake = Faker()
 
+	col1, col2 = st.columns(2)
+	with col1:
+		st.write('Reset')
+	with col2:
+		rows = st.slider('Enter number of rows desired', 1, 25, 1)
+	
 	df = pd.DataFrame()
 	df.columns = ['Name', 'Address', 'Birthdate']
 
@@ -21,6 +25,7 @@ def main():
 
 	st.dataframe(df)
 
+							 
 if __name__ == '__main__':
 	
 	main()	
