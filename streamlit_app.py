@@ -25,7 +25,7 @@ def main():
 
 			data = [fake.name(), fake.address(), fake.date(), fake.ssn(), fake.ipv4_private()]
 
-			for key in range(len(columns)):
+			for col in range(len(columns)):
 				key = columns[col]
 				val = data[col]
 				dict[key] = val
