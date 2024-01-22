@@ -16,13 +16,15 @@ def main():
 	fake = Faker()
 
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
-	
-	df = pd.DataFrame(columns=['Name', 'Address', 'Birthdate'])
+
+	columns=['Name', 'Address', 'Birthdate']
+
+	df = pd.DataFrame(columns=columns)
 
 	if rows > 1:
 		for _ in range(rows):
 			data = {'Name': fake.name(), 'Address': fake.address(), 'Birthdate': fake.date()}
-			row = pd.DataFrame.from_dict(data)
+			row = pd.DataFrame.from_dict(data, orient='columns', columns=columns)
 			df = pd.concat([df, row], axis=0)
 
 	st.dataframe(df, hide_index=True)
