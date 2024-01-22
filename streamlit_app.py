@@ -13,7 +13,7 @@ def main():
 	fake = Faker()
 
 	if rows > 1:
-		for _ in range(rows+1):
+		for _ in range(rows):
 			st.write(fake.name(), '\t', fake.address())
 
 if __name__ == '__main__':
