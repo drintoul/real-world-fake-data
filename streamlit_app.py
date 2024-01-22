@@ -23,7 +23,7 @@ def main():
 		
 		col1, col2 = st.columns(2)
 		with col1:
-			colname = st.input(f'Enter column name for column {n+1}')
+			colname = st.text_input(f'Enter column name for column {n+1}')
 		with col2:
 			coltype = st.selectbox(f'Enter data type for column {n+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
 
