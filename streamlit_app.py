@@ -8,7 +8,7 @@ st.subheader('Generate Fake data in CSV')
 
 def main():
 
-	rows = st.number_input('Enter number of rows desired', min_value=1, max_value=25, value=0, step=1)
+	rows = st.number_input('Enter number of rows desired', min_value=1, max_value=25, value=1, step=1)
 
 	fake = Faker()
 
