@@ -17,7 +17,7 @@ def main():
 
 	cols = st.slider('Enter number of columns desired', 1, 10, 1)
 
-	coltypes = []
+	coltypes = {}
 
 	for n in range(cols):
 
@@ -29,7 +29,7 @@ def main():
 		with col2:
 			coltype = st.selectbox('Data type', ['Birthdate', 'SSN', 'Address', 'Name'])
 
-		coltypes.append((colname, coltype))
+		coltypes[colname] = coltype
 
 	st.write(coltypes)
 
