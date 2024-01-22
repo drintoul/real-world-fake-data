@@ -24,7 +24,7 @@ def main():
 		for _ in range(rows):
 			data = (fake.name(), fake.address(), fake.date())
 			row = pd.DataFrame(data)
-			df = df.concat([df, row], axis=0)
+			df = df.concat([df, row], axis=1)
 
 	st.dataframe(df, hide_index=True)
 
