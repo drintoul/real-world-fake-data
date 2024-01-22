@@ -19,9 +19,9 @@ def main():
 
 	coltypes = {}
 
-	for n in range(cols):
+	for _ in range(cols):
 
-		st.write(f'Column {n+1}')
+		st.write(f'Column {_+1}')
 
 		col1, col2 = st.columns(2)
 		with col1:
