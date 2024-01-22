@@ -18,7 +18,7 @@ def main():
 	cols = st.slider('Enter number of columns desired', 1, 10, 1)
 	
 	for _ in range(cols):
-		st.selectbox(f'Enter data type for column {_}', ['Birthdate', 'SSN', 'Address', 'Name'])
+		st.selectbox(f'Enter data type for column {_+1}', ['Birthdate', 'SSN', 'Address', 'Name'])
 	
 	rows = st.slider('Enter number of rows desired', 1, 25, 1)
 
