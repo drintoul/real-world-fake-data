@@ -25,8 +25,8 @@ def main():
 
 			data = [fake.name(), fake.address(), fake.date(), fake.ssn(), fake.ipv4_private()]
 
-			for _ in range(len(columns)):
-				dict[columns[_]] = data[_]
+			for col in range(len(columns)):
+				dict[columns[col]] = data[col]
 
 			df = pd.append(dict, ignore_index=True)
 
