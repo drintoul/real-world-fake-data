@@ -24,7 +24,7 @@ def main():
 	if rows > 1:
 		for _ in range(rows):
 			data = {'Name': fake.name(), 'Address': fake.address(), 'Birthdate': fake.date()}
-			row = pd.DataFrame.from_dict(data, orient='columns', columns=columns)
+			row = pd.DataFrame.from_dict(data, orient='columns')
 			df = pd.concat([df, row], axis=0)
 
 	st.dataframe(df, hide_index=True)
