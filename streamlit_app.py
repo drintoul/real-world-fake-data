@@ -34,7 +34,7 @@ def main():
 				dict[key] = val
 				data = pd.DataFrame.from_dict(dict)
 
-			df = pd.concat([df, data], ignore_index=True)
+			df = pd.concat([df, data])
 
 	st.dataframe(df) #, hide_index=True)
 
