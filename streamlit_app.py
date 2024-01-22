@@ -22,7 +22,8 @@ def main():
 
 	if rows > 1:
 		for _ in range(rows):
-			df = df.concat([df, pd.DataFrame((fake.name(), fake.address(), fake.date()))])
+			data = pd.DataFrame((fake.name(), fake.address(), fake.date()))
+			df = df.concat([df, data], axis=0)
 
 	st.dataframe(df, hide_index=True)
 
