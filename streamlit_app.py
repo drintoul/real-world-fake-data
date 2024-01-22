@@ -21,7 +21,7 @@ def main():
 
 	if rows > 1:
 		for _ in range(rows):
-			data = (fake.name(), fake.address(), fake.date())
+			data = {'Name': fake.name(), 'Address': fake.address(), 'Birthdate': fake.date()}
 			row = pd.DataFrame(data)
 			df = pd.concat([df, row], axis=0)
 
