@@ -29,7 +29,7 @@ def main():
 		with col2:
 			coltype = st.selectbox('Data type', ['Birthdate', 'SSN', 'Address', 'Name'])
 
-		coltypes.append(coltype)
+		coltypes.append((colname, coltype))
 
 	st.write(coltypes)
 
