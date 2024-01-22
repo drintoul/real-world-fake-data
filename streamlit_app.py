@@ -23,6 +23,7 @@ def main():
 	if rows > 1:
 		for _ in range(rows):
 
+			dict = {}
 			data = [fake.name(), fake.address(), fake.date(), fake.ssn(), fake.ipv4_private()]
 
 			for col in range(len(columns)):
