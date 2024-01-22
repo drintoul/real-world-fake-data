@@ -21,9 +21,9 @@ def main():
 
 	if rows > 1:
 		for _ in range(rows):
-			df = df.concat([df, pd.DataFrame((fake.name(), fake.address(), fake.date()))], hide_index=True)
+			df = df.concat([df, pd.DataFrame((fake.name(), fake.address(), fake.date()))], axis=1)
 
-	st.dataframe(df)
+	st.dataframe(df, hide_index=True)
 
 							 
 if __name__ == '__main__':
