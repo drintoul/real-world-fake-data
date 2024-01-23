@@ -29,8 +29,8 @@ def show_grid(columns, rows):
 		with col2:
 			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN']))
 
-	dict = dict(zip(names, types))
-	st.write(dict)
+	data = dict(zip(names, types))
+	st.write(data)
 
 def main():
 	
