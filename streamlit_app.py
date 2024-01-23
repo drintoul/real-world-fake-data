@@ -74,7 +74,7 @@ def main():
 
 	if nkeys == nvals:
 
-		df = pd.DataFrame(columns=colnames)
+		df = pd.DataFrame(columns=keys)
 		
 		for _ in range(rows):
 
@@ -84,6 +84,8 @@ def main():
 				df = pd.concat([df, data], axis=0)
 
 		st.dataframe(df)
+
+	df.to_csv('rwfd.csv', ignore_index=True)
 
 if __name__ == '__main__':
 	
