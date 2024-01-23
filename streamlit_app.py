@@ -32,7 +32,7 @@ def show_grid(columns, rows):
 
 def gen_fake(type):
 
-	return fake
+	return type
 
 def main():
 
@@ -58,7 +58,7 @@ def main():
 	if nkeys == nvals:
 
 		st.write(keys)
-		st.write([exec('faker.{}()'.format(mappings[val])) for val in vals])
+		st.write([gen_fake(mappings[val]) for val in vals])
 		
 #		colnames = data.keys()
 #		df = pd.DataFrame(columns=colnames)
