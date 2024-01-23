@@ -37,7 +37,7 @@ def main():
 
 	fake = Faker()
 	st.write(fake.name())
-	st.write(exec("faker.name()"))
+	st.write(exec("fake.name()"))
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
 
