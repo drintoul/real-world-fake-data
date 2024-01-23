@@ -90,7 +90,7 @@ def main():
 		st.write('Sample DataFrame')
 		st.dataframe(df.head())
 
-	df.to_csv('rwfd.csv', ignore_index=True)
+	df.to_csv('rwfd.csv', index=False)
 	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
 
 if __name__ == '__main__':
