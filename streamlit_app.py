@@ -37,7 +37,7 @@ def main():
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
 	
-	fake = Faker()
+	faker = Faker()
 
 	columns, rows = specify_dims()
 
