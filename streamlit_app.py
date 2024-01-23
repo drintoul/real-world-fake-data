@@ -34,6 +34,9 @@ def main():
 
 	import pandas as pd
 	from faker import Faker
+
+	st.write(faker.name())
+	st.write(exec("faker.name()"))
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
 	
