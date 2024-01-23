@@ -38,9 +38,11 @@ def main():
 
 	data = show_grid(columns, rows)
 	
-	ncols = sum(1 for key, value in data.items() if key)
-	nrows = sum(1 for key, value in data.items() if value)
-	st.write(data, ncols, nrows)
+	nkeys = sum(1 for key, value in data.items() if key)
+	nvals = sum(1 for key, value in data.items() if value)
+
+	if nkeys = nvals:
+		st.write(data, nkeys, nvals)
 
 if __name__ == '__main__':
 	
