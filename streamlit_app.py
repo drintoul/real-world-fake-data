@@ -8,14 +8,22 @@ st.title('Real World Fake Data')
 
 def show_grid(columns, rows):
 
-	for row in range(rows):
-		for col in range(columns):
-			st.write(row, col)
+	name = {}
+	type = {}
+
+	for col in range(columns):
+		
+		col1, col2 = st.colums(2)
+		with col1:
+			name[col] = st.text_input()
+		with col2:
+			type[col] = st.selectbox(options=['Name', 'Address', 'SSN'])
+	st.write(name)
+	st.write(type)
 
 def main():
 	
 	col1, col2 = st.columns(2)
-
 	with col1:
 		columns = st.slider('Columns', min_value=1, max_value=10, step=1, value=1)
 	with col2:
