@@ -24,7 +24,7 @@ def show_grid(columns, rows):
 		with col1:
 			names.append(st.text_input("Column Name", key=col))
 		with col2:
-			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN', 'IPv4 Address', 'Company', 'Credit Card', 'Date_time', 'Geo', 'Phone Number', 'Job', 'Currency'], key=col+columns))
+			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN', 'IPv4 Address', 'Company', 'Date_time', 'Geo', 'Phone Number', 'Job', 'Currency'], key=col+columns))
 
 	data = dict(zip(names, types))
 
@@ -38,9 +38,8 @@ def main():
 
 	fake = Faker()
 	fake.add_provider(internet)
-	fake.add_provider(credit_card)
 	
-	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private', 'Company': 'company', 'Credit Card': 'credit_card', 'Datetime': 'date_time', 'Geo': 'geo', 'Phone Number': 'phone_number', 'Job':'job', 'Currency': 'currency'}
+	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private', 'Company': 'company', 'Datetime': 'date_time', 'Geo': 'geo', 'Phone Number': 'phone_number', 'Job':'job', 'Currency': 'currency'}
 
 	columns, rows = specify_dims()
 
