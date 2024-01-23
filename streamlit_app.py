@@ -86,11 +86,12 @@ def main():
 
 				info = info.append(gen_fake(v))
 
+			st.write(info)
 			df = pd.concat([df, info], axis=0)
 
 		st.dataframe(df)
 
-	df.to_csv('rwfd.csv', ignore_index=True)
+	#df.to_csv('rwfd.csv', ignore_index=True)
 	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
 
 if __name__ == '__main__':
