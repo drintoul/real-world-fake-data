@@ -13,7 +13,7 @@ def show_grid(columns, rows):
 
 	for col in range(columns):
 		
-		col1, col2 = st.colums(2)
+		col1, col2 = st.columns(2)
 		with col1:
 			name[col] = st.text_input()
 		with col2:
