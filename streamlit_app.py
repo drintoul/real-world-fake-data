@@ -30,11 +30,12 @@ def show_grid(columns, rows):
 			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN'], key=col+columns))
 
 	data = dict(zip(names, types))
+
 	return data
 
 def main():
 
-	mappings = {'Name': faker.name(), 'Address': faker.address(), 'SSN': faker.ssn()}
+	# mappings = {'Name': faker.name(), 'Address': faker.address(), 'SSN': faker.ssn()}
 	
 	fake = Faker()
 
@@ -51,14 +52,14 @@ def main():
 
 		st.write(data, nkeys, nvals)
 		
-		for _ in rows:
+	#	for _ in rows:
 			
-			list = []
+	#		list = []
 			
-			for type in data.values():
-				list.append(mappings[type])
+	#		for type in data.values():
+	#			list.append(mappings[type])
 
-		df = pd.concat([df, pd.DataFrame(list)])
+	#	df = pd.concat([df, pd.DataFrame(list)])
 
 if __name__ == '__main__':
 	
