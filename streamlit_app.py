@@ -78,10 +78,13 @@ def main():
 		
 		for _ in range(rows):
 
-			for _ in range(keys):
+			info = []
 
-				data = [gen_fake(val) for val in vals]
-				df = pd.concat([df, data], axis=0)
+			for key in keys:
+
+				info += gen_fake(val)
+
+			df = pd.concat([df, info], axis=0)
 
 		st.dataframe(df)
 
