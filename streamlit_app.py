@@ -59,7 +59,7 @@ def main():
 			row.columns = colnames
 			df = pd.concat([df, row], axis=0)
 
-#		st.dataframe(df)
+		st.dataframe(df)
 
 if __name__ == '__main__':
 	
