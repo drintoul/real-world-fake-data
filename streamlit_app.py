@@ -59,8 +59,9 @@ def main():
 		
 		for _ in range(rows):
 
-			row = data.values()
-			df = pd.concat([df, pd.DataFrame(row, columns=colnames).T], axis=0)
+			row = pd.DataFrame(data.values()).T
+			row.columns = colnames
+			df = pd.concat([df, row], axis=0)
 
 		st.dataframe(df)
 
