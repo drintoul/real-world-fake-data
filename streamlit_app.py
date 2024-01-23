@@ -8,8 +8,8 @@ st.title('Real World Fake Data')
 
 def show_grid(columns, rows):
 
-	name = []
-	type = []
+	names = []
+	types = []
 
 	for col in range(columns):
 		
