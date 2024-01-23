@@ -44,6 +44,8 @@ def gen_fake(type):
 		return fake.address()
 	if type == 'SSN':
 		return fake.ssn()
+	if type == 'Datetime':
+		return fake.date_time()
 	if type == 'IPv4 Address':
 		return fake.ipv4_private()
 	if type == 'Company':
