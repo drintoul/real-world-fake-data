@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.set_page_config(page_title="Real World Fake Data")
 st.title('Real World Fake Data')
 
@@ -30,7 +32,6 @@ def show_grid(columns, rows):
 
 def main():
 
-	import streamlit as st
 	import pandas as pd
 	from faker import Faker
 	
