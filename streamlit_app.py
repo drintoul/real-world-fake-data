@@ -66,6 +66,8 @@ def main():
 
 	data = show_grid(columns, rows)
 
+	st.write(data)
+
 	keys = [key for key, value in data.items()]
 	vals = [value for key, value in data.items()]
 	
