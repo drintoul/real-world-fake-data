@@ -32,7 +32,7 @@ def show_grid(columns, rows):
 
 def gen_fake(type):
 
-	if type = 'name':
+	if type == 'name':
 		return fake.name()
 	if type == 'address':
 		return fake.address()
