@@ -38,6 +38,7 @@ def main():
 
 	fake = Faker()
 	fake.add_provider(internet)
+	fake.add_provider(credit_card)
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private', 'Company': 'company', 'Credit Card': 'credit_card', 'Datetime': 'date_time', 'Geo': 'geo', 'Phone Number': 'phone_number', 'Job':'job', 'Currency': 'currency'}
 
