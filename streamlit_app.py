@@ -84,7 +84,7 @@ def main():
 
 			for k, v in data.items():
 
-				info += gen_fake(v)
+				info = info.append(gen_fake(v))
 
 			df = pd.concat([df, info], axis=0)
 
