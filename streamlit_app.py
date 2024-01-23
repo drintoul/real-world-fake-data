@@ -82,6 +82,8 @@ def main():
 			info = []
 
 			for k,v in data.items():
+
+				st.write(k,v)
 				
 				item = gen_fake(v)
 				st.write(item)
