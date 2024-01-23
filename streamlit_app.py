@@ -86,7 +86,8 @@ def main():
 				
 				info[k] = gen_fake(v)
 
-			df = df.append(info, ignore_index=True)
+			info_df = pd.DataFrame([info])
+			df = df.concat([df, info_df], ignore_index=True)
 
 		st.dataframe(df)
 
