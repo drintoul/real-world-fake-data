@@ -56,7 +56,7 @@ def main():
 		for _ in range(rows):
 
 			for mapping in mappings:
-				item = exec("fake.{}()".format(mapping))
+				item = exec("fake.{}()".format(mappings[mapping]))
 				st.write(item)
 
 			#st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
