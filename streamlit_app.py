@@ -32,6 +32,12 @@ def show_grid(columns, rows):
 
 def gen_fake(type):
 
+	from faker import Faker
+	from faker.providers import internet
+
+	fake = Faker()
+	fake.add_provider(internet)
+
 	if type == 'name':
 		return fake.name()
 	if type == 'address':
@@ -41,11 +47,6 @@ def gen_fake(type):
 def main():
 
 	import pandas as pd
-	from faker import Faker
-	from faker.providers import internet
-
-	fake = Faker()
-	fake.add_provider(internet)
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private', 'Company': 'company', 'Datetime': 'date_time', 'Phone Number': 'phone_number', 'Job':'job', 'Currency': 'currency'}
 
