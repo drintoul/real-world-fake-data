@@ -74,17 +74,16 @@ def main():
 
 	if nkeys == nvals:
 
-		st.write(keys)
-		st.write([gen_fake(val) for val in vals])
+		df = pd.DataFrame(columns=colnames)
 		
-#		colnames = data.keys()
-#		df = pd.DataFrame(columns=colnames)
-#		
-#		for _ in range(rows):
+		for _ in range(rows):
 
-#			for _ in range(columns):
+			for _ in range(keys):
 
-#		st.dataframe(df)
+				data = [gen_fake(val) for val in vals])
+				df = pd.concat([df, data], axis=0)
+
+		st.dataframe(df)
 
 if __name__ == '__main__':
 	
