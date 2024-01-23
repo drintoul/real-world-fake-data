@@ -74,7 +74,6 @@ def main():
 	if nkeys == nvals:
 
 		df = pd.DataFrame(columns=keys)
-		st.dataframe(df)
 		
 		for _ in range(rows):
 			st.write(_)
@@ -88,9 +87,9 @@ def main():
 				info[k] = gen_fake(v)
 
 			st.write(info)
-			#df = pd.concat([df, info], axis=0)
+			df = pd.concat([df, info], axis=0)
 
-		#st.dataframe(df)
+		st.dataframe(df)
 
 	#df.to_csv('rwfd.csv', ignore_index=True)
 	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
