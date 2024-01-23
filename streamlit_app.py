@@ -52,7 +52,7 @@ def main():
 		st.dataframe(df)
 		st.write(data)
 		
-		for _ in rows:
+		for _ in range(rows):
 			
 			list = []
 			
