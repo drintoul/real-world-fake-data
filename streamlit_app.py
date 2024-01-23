@@ -54,7 +54,7 @@ def main():
 		
 		for _ in range(rows):
 
-			st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()]
+			st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
 			#row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
 			#st.write(row)
 			#row.columns = colnames
