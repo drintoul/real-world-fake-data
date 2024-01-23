@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(page_title="Real World Fake Data")
 st.title('Real World Fake Data')
 
-def show_grid(columns, rows)
+def show_grid(columns, rows):
 
 	for row in range(rows):
 		for col in range(columns);
