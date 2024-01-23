@@ -48,18 +48,13 @@ def main():
 
 	if nkeys == nvals:
 
-		st.write(data.keys())
-		st.write(data.values())
-
 		colnames = data.keys()
 		df = pd.DataFrame(columns=colnames)
 		st.dataframe(df)
 		
-		st.write(data)
-		
 		for _ in range(rows):
 
-			row = pd.DataFrame(data.values()).T
+			row = pd.DataFrame(['faker.{}()'.format(mappings(item)) for item in data.values()]).T
 			row.columns = colnames
 			df = pd.concat([df, row], axis=0)
 
