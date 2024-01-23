@@ -77,6 +77,7 @@ def main():
 		st.dataframe(df)
 		
 		for _ in range(rows):
+			st.write(_)
 
 			info = []
 
