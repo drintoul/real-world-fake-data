@@ -37,8 +37,10 @@ def main():
 	columns, rows = specify_dims()
 
 	data = show_grid(columns, rows)
-
-	st.write(data, len(data.keys()), len(data.values()))
+	
+	ncols = sum(1 for key, value in data.items() if key)
+	nrows = sum(1 for key, value in data.items() if value)
+	st.write(data, ncols, nrows)
 
 if __name__ == '__main__':
 	
