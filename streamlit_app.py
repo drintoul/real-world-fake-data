@@ -66,10 +66,8 @@ def main():
 
 	data = show_grid(columns, rows)
 
-	st.write(data)
-
-	keys = [key for key, value in data.items()]
-	vals = [value for key, value in data.items()]
+	keys = [k for k,v in data.items()]
+	vals = [v for k,v in data.items()]
 	
 	nkeys = len(keys) #sum(1 for key, value in data.items() if key)
 	nvals = len(vals) #sum(1 for key, value in data.items() if value)
@@ -82,14 +80,14 @@ def main():
 
 			info = []
 
-			for k, v in data.items():
+			for k,v in data.items():
 
 				info = info.append(gen_fake(v))
 
 			st.write(info)
-			df = pd.concat([df, info], axis=0)
+			#df = pd.concat([df, info], axis=0)
 
-		st.dataframe(df)
+		#st.dataframe(df)
 
 	#df.to_csv('rwfd.csv', ignore_index=True)
 	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
