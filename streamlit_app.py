@@ -52,13 +52,13 @@ def main():
 		st.dataframe(df)
 		st.write(data)
 		
-		for _ in range(rows):
+		#for _ in range(rows):
 			
-			list = []
+		#	list = []
 			
-			for type in data.values():
+		#	for type in data.values():
 				# list.append(faker.mappings[type]())
-				list.append(type)
+		#		list.append(type)
 
 			#df = pd.concat([df, pd.DataFrame(list)], axis=1)
 
