@@ -12,7 +12,7 @@ def main():
 
 	with col1:
 		st.write('Columns')
-		columns = st.select('Columns', min_value=1, max_value=10, step=1, value=1)
+		columns = st.slider('Columns', min_value=1, max_value=10, step=1, value=1)
 	with col2:
 		st.write('Rows')
 		rows = st.select_slider('Rows', options=[1, 10, 100, 1000], value=1)
