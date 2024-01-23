@@ -81,8 +81,9 @@ def main():
 			info = []
 
 			for k,v in data.items():
-
-				info = info.append(gen_fake(v))
+				
+				item = gen_fake(v)
+				info = info.append(item)
 
 			st.write(info)
 			#df = pd.concat([df, info], axis=0)
