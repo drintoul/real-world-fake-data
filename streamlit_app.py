@@ -56,15 +56,12 @@ def main():
 		for _ in range(rows):
 
 			for mapping in mappings:
-				#item = exec("fake.{}()".format(mappings[mapping]))
-				#st.write(item)
-				st.write(mapping)
 
-			#st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
-			#row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
-			#st.write(row)
-			#row.columns = colnames
-			#df = pd.concat([df, row], axis=0)
+				st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
+				row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
+				st.write(row)
+				row.columns = colnames
+				df = pd.concat([df, row], axis=0)
 
 		st.dataframe(df)
 
