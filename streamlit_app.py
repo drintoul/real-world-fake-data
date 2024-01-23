@@ -35,7 +35,7 @@ def main():
 	import pandas as pd
 	from faker import Faker
 	
-	mappings = {'Name': faker.name(), 'Address': faker.address(), 'SSN': faker.ssn()}
+	mappings = {'Name': 'name', 'Address': address, 'SSN': ssn}
 	
 	fake = Faker()
 
@@ -60,6 +60,8 @@ def main():
 				list.append(mappings[type])
 
 		df = pd.concat([df, pd.DataFrame(list)])
+
+		st.dataframe(df)
 
 if __name__ == '__main__':
 	
