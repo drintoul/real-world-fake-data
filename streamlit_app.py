@@ -38,17 +38,27 @@ def gen_fake(type):
 	fake = Faker()
 	fake.add_provider(internet)
 
-	if type == 'name':
+	if type == 'Name':
 		return fake.name()
-	if type == 'address':
+	if type == 'Address':
 		return fake.address()
-	return True
+	if type == 'SSN':
+		return fake.ssn()
+	if type == 'IPv4 Address':
+		return fake.ipv4_private()
+	if type == 'Company':
+		return fake.company()
+	if type == 'Phone Number':
+		return fake.phone_number()
+	if type == 'Job':
+		return fake.job()
+	if type == 'Currency':
+		return fake.currency()
+	return False
 
 def main():
 
 	import pandas as pd
-	
-	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private', 'Company': 'company', 'Datetime': 'date_time', 'Phone Number': 'phone_number', 'Job':'job', 'Currency': 'currency'}
 
 	columns, rows = specify_dims()
 
@@ -63,7 +73,7 @@ def main():
 	if nkeys == nvals:
 
 		st.write(keys)
-		st.write([gen_fake(mappings[val]) for val in vals])
+		st.write([gen_fake(val) for val in vals])
 		
 #		colnames = data.keys()
 #		df = pd.DataFrame(columns=colnames)
