@@ -12,7 +12,7 @@ def specify_dims():
 	with col1:
 		columns = st.slider('Columns', min_value=1, max_value=10, step=1, value=1)
 	with col2:
-		rows = st.select_slider('Rows', options=[1, 10, 100, 1000, 10000, 100000], value=1)
+		rows = st.select_slider('Rows', options=[1, 5, 10, 100, 1000, 10000, 100000], value=5)
 
 	return columns, rows
 
@@ -33,7 +33,11 @@ def show_grid(columns, rows):
 	return data
 
 def main():
+
+	mappings = {'Name': faker.name(), 'Address': faker.address(), 'SSN': faker.ssn()}
 	
+	fake = Faker()
+
 	columns, rows = specify_dims()
 
 	data = show_grid(columns, rows)
@@ -42,7 +46,19 @@ def main():
 	nvals = sum(1 for key, value in data.items() if value)
 
 	if nkeys == nvals:
+
+		df = pd.DataFrame(columns=data.keys())
+
 		st.write(data, nkeys, nvals)
+		
+		for _ in rows:
+			
+			list = []
+			
+			for type in data.values():
+				list.append(mappings[type])
+
+		df = pd.concat([df, pd.DataFrame(list))
 
 if __name__ == '__main__':
 	
