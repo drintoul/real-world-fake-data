@@ -48,8 +48,12 @@ def main():
 
 	if nkeys == nvals:
 
+		st.write(data.keys())
+		st.write(data.values())
+		
 		df = pd.DataFrame(columns=data.keys())
 		st.dataframe(df)
+		
 		st.write(data)
 		
 		#for _ in range(rows):
