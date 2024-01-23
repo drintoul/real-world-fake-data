@@ -50,8 +50,9 @@ def main():
 
 		st.write(data.keys())
 		st.write(data.values())
-		
-		df = pd.DataFrame(columns=data.keys())
+
+		colnames = data.keys()
+		df = pd.DataFrame(columns=colnames)
 		st.dataframe(df)
 		
 		st.write(data)
@@ -59,7 +60,7 @@ def main():
 		for _ in range(rows):
 
 			row = data.values()
-			df = pd.concat([df, pd.DataFrame(row).T], axis=0)
+			df = pd.concat([df, pd.DataFrame(row, columns=colnames).T], axis=0)
 
 		st.dataframe(df)
 
