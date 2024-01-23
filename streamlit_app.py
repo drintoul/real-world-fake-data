@@ -24,7 +24,7 @@ def show_grid(columns, rows):
 		with col1:
 			names.append(st.text_input("Column Name", key=col))
 		with col2:
-			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN'], key=col+columns))
+			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN', 'IPv4 Address'], key=col+columns))
 
 	data = dict(zip(names, types))
 
@@ -57,7 +57,7 @@ def main():
 
 			st.write(fake.address())
 
-			st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
+			#st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
 			#row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
 			#st.write(row)
 			#row.columns = colnames
