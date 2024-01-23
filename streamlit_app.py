@@ -92,7 +92,9 @@ def main():
 		st.dataframe(df.head())
 
 	df.to_csv('rwfd.csv', index=False)
-	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
+	#st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
+	with open('rwfd.csv') as f:
+		st.download_button('Download CSV', f)
 
 if __name__ == '__main__':
 	
