@@ -48,7 +48,7 @@ def main():
 
 	if nkeys == nvals:
 
-		df = pd.DataFrame(columns=data.keys())
+	#	df = pd.DataFrame(columns=data.keys())
 
 		st.write(data, nkeys, nvals)
 		
