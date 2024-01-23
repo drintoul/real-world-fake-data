@@ -54,7 +54,7 @@ def main():
 		
 		for _ in range(rows):
 
-			row = pd.DataFrame(['faker.{}()'.format(mappings[item]) for item in data.values()]).T
+			row = pd.DataFrame([exec('faker.{}()'.format(mappings[item])) for item in data.values()]).T
 			row.columns = colnames
 			df = pd.concat([df, row], axis=0)
 
