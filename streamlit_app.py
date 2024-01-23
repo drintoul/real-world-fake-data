@@ -41,7 +41,7 @@ def main():
 	nkeys = sum(1 for key, value in data.items() if key)
 	nvals = sum(1 for key, value in data.items() if value)
 
-	if nkeys = nvals:
+	if nkeys == nvals:
 		st.write(data, nkeys, nvals)
 
 if __name__ == '__main__':
