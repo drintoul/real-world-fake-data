@@ -12,7 +12,7 @@ def specify_dims():
 	with col1:
 		columns = st.slider('Columns', min_value=1, max_value=10, step=1, value=1)
 	with col2:
-		rows = st.select_slider('Rows', options=[1, 10, 100, 1000], value=1)
+		rows = st.select_slider('Rows', options=[1, 10, 100, 1000, 10000, 100000], value=1)
 
 	return columns, rows
 
@@ -30,13 +30,15 @@ def show_grid(columns, rows):
 			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN'], key=col+columns))
 
 	data = dict(zip(names, types))
-	st.write(data)
+	return data
 
 def main():
 	
 	columns, rows = specify_dims()
 
-	show_grid(columns, rows)
+	data = show_grid(columns, rows)
+
+	st.write(data)
 
 if __name__ == '__main__':
 	
