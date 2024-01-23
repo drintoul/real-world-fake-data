@@ -44,19 +44,18 @@ def gen_fake(type):
 		return fake.address()
 	if type == 'SSN':
 		return fake.ssn()
-	if type == 'Datetime':
-		return fake.date_time()
 	if type == 'IPv4 Address':
 		return fake.ipv4_private()
 	if type == 'Company':
 		return fake.company()
+	if type == 'Datetime':
+		return fake.date_time()
 	if type == 'Phone Number':
 		return fake.phone_number()
 	if type == 'Job':
 		return fake.job()
 	if type == 'Currency':
 		return fake.currency()
-	return False
 
 def main():
 
@@ -75,6 +74,7 @@ def main():
 	if nkeys == nvals:
 
 		df = pd.DataFrame(columns=keys)
+		st.dataframe(df)
 		
 		for _ in range(rows):
 
