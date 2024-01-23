@@ -59,7 +59,7 @@ def main():
 		for _ in range(rows):
 
 			row = data.values()
-			df = pd.concat([df, pd.DataFrame(row)], axis=0)
+			df = pd.concat([df, pd.DataFrame(row).T], axis=0)
 
 		st.dataframe(df)
 
