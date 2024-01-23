@@ -58,7 +58,7 @@ def main():
 			for type in data.values():
 				list.append(mappings[type])
 
-		df = pd.concat([df, pd.DataFrame(list))
+		df = pd.concat([df, pd.DataFrame(list)])
 
 if __name__ == '__main__':
 	
