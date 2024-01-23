@@ -50,13 +50,14 @@ def main():
 	data = show_grid(columns, rows)
 
 	cols = [key for key, value in data.items()]
-	st.write(cols)
 	
-#	nkeys = sum(1 for key, value in data.items() if key)
-#	nvals = sum(1 for key, value in data.items() if value)
+	nkeys = sum(1 for key, value in data.items() if key)
+	nvals = sum(1 for key, value in data.items() if value)
 
-#	if nkeys == nvals:
+	if nkeys == nvals:
 
+		st.write(cols)
+		
 #		colnames = data.keys()
 #		df = pd.DataFrame(columns=colnames)
 #		
