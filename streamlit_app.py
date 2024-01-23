@@ -35,12 +35,11 @@ def main():
 	import pandas as pd
 	from faker import Faker
 
-	st.write(faker.name())
+	fake = Faker()
+	st.write(fake.name())
 	st.write(exec("faker.name()"))
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
-	
-	faker = Faker()
 
 	columns, rows = specify_dims()
 
@@ -57,7 +56,7 @@ def main():
 		
 		for _ in range(rows):
 
-			[exec('faker.{}()'.format(mappings[item])) for item in data.values()]
+			[exec('fake.{}()'.format(mappings[item])) for item in data.values()]
 			#row = pd.DataFrame([exec('faker.{}()'.format(mappings[item])) for item in data.values()]).T
 			#row.columns = colnames
 			#df = pd.concat([df, row], axis=0)
