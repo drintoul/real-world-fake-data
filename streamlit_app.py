@@ -82,7 +82,7 @@ def main():
 
 			for key in keys:
 
-				info += gen_fake(val)
+				info += gen_fake(vals[keys.index(key)])
 
 			df = pd.concat([df, info], axis=0)
 
