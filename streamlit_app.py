@@ -54,11 +54,12 @@ def main():
 		
 		for _ in range(rows):
 
-			row = pd.DataFrame([exec('faker.{}()'.format(mappings[item])) for item in data.values()]).T
-			row.columns = colnames
-			df = pd.concat([df, row], axis=0)
+			[exec('faker.{}()'.format(mappings[item])) for item in data.values()]
+			#row = pd.DataFrame([exec('faker.{}()'.format(mappings[item])) for item in data.values()]).T
+			#row.columns = colnames
+			#df = pd.concat([df, row], axis=0)
 
-		st.dataframe(df)
+#		st.dataframe(df)
 
 if __name__ == '__main__':
 	
