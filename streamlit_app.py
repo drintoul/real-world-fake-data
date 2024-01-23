@@ -9,7 +9,7 @@ st.title('Real World Fake Data')
 def show_grid(columns, rows):
 
 	for row in range(rows):
-		for col in range(columns);
+		for col in range(columns):
 			st.write(row, col)
 
 def main():
