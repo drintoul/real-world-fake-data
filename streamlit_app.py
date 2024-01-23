@@ -1,8 +1,3 @@
-import streamlit as st
-from faker import Faker
-import pandas as pd
-import numpy as np
-
 st.set_page_config(page_title="Real World Fake Data")
 st.title('Real World Fake Data')
 
@@ -35,6 +30,10 @@ def show_grid(columns, rows):
 
 def main():
 
+	import streamlit as st
+	import pandas as pd
+	from faker import Faker
+	
 	# mappings = {'Name': faker.name(), 'Address': faker.address(), 'SSN': faker.ssn()}
 	
 	fake = Faker()
