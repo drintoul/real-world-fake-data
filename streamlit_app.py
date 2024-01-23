@@ -54,8 +54,8 @@ def main():
 		
 		for _ in range(rows):
 
-			#[exec('fake.{}()'.format(mappings[item])) for item in data.values()]
 			row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
+			st.write(row)
 			row.columns = colnames
 			df = pd.concat([df, row], axis=0)
 
