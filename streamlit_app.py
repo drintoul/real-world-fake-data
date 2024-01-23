@@ -80,7 +80,7 @@ def main():
 
 			for _ in range(keys):
 
-				data = [gen_fake(val) for val in vals])
+				data = [gen_fake(val) for val in vals]
 				df = pd.concat([df, data], axis=0)
 
 		st.dataframe(df)
