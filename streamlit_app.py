@@ -17,7 +17,7 @@ def main():
 		st.write('Rows')
 		rows = st.select_slider('Rows', options=[1, 10, 100, 1000], value=1)
 
-	#st.write(columns, rows)
+	st.write(columns, rows)
 
 if __name__ == '__main__':
 	
