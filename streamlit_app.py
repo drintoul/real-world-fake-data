@@ -60,7 +60,7 @@ def main():
 				# list.append(faker.mappings[type]())
 				list.append(type)
 
-		df = pd.concat([df, pd.DataFrame(list)])
+			df = pd.concat([df, pd.DataFrame(list)])
 
 		st.dataframe(df)
 
