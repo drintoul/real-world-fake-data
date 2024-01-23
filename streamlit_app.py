@@ -34,10 +34,12 @@ def main():
 
 	import pandas as pd
 	from faker import Faker
+	from faker.providers import internet
 
 	fake = Faker()
+	fake.add_provider(internet)
 	
-	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
+	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn', 'IPv4 address': 'ipv4_private'}
 
 	columns, rows = specify_dims()
 
