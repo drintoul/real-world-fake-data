@@ -56,15 +56,10 @@ def main():
 		
 		st.write(data)
 		
-		#for _ in range(rows):
-			
-		#	list = []
-			
-		#	for type in data.values():
-				# list.append(faker.mappings[type]())
-		#		list.append(type)
+		for _ in range(rows):
 
-			#df = pd.concat([df, pd.DataFrame(list)], axis=1)
+			row = data.values()
+			df = pd.concat([df, pd.DataFrame(row)], axis=1)
 
 		st.dataframe(df)
 
