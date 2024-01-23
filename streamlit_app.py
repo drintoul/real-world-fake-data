@@ -86,6 +86,7 @@ def main():
 		st.dataframe(df)
 
 	df.to_csv('rwfd.csv', ignore_index=True)
+	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
 
 if __name__ == '__main__':
 	
