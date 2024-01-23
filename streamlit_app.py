@@ -35,7 +35,7 @@ def main():
 	import pandas as pd
 	from faker import Faker
 	
-	mappings = {'Name': 'name', 'Address': address, 'SSN': ssn}
+	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
 	
 	fake = Faker()
 
@@ -57,7 +57,8 @@ def main():
 			list = []
 			
 			for type in data.values():
-				list.append(mappings[type])
+				# list.append(faker.mappings[type]())
+				list.append(type)
 
 		df = pd.concat([df, pd.DataFrame(list)])
 
