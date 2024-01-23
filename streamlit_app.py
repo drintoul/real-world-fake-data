@@ -36,8 +36,6 @@ def main():
 	from faker import Faker
 
 	fake = Faker()
-	st.write(fake.name())
-	st.write(exec("fake.name()"))
 	
 	mappings = {'Name': 'name', 'Address': 'address', 'SSN': 'ssn'}
 
@@ -56,10 +54,10 @@ def main():
 		
 		for _ in range(rows):
 
-			[exec('fake.{}()'.format(mappings[item])) for item in data.values()]
-			#row = pd.DataFrame([exec('faker.{}()'.format(mappings[item])) for item in data.values()]).T
-			#row.columns = colnames
-			#df = pd.concat([df, row], axis=0)
+			#[exec('fake.{}()'.format(mappings[item])) for item in data.values()]
+			row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
+			row.columns = colnames
+			df = pd.concat([df, row], axis=0)
 
 #		st.dataframe(df)
 
