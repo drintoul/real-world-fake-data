@@ -30,6 +30,10 @@ def show_grid(columns, rows):
 
 	return data
 
+def gen_fake(type):
+
+	return fake
+
 def main():
 
 	import pandas as pd
@@ -44,26 +48,23 @@ def main():
 	columns, rows = specify_dims()
 
 	data = show_grid(columns, rows)
+
+	cols = [key for key, value in data.items()]
+	st.write(cols)
 	
-	nkeys = sum(1 for key, value in data.items() if key)
-	nvals = sum(1 for key, value in data.items() if value)
+#	nkeys = sum(1 for key, value in data.items() if key)
+#	nvals = sum(1 for key, value in data.items() if value)
 
-	if nkeys == nvals:
+#	if nkeys == nvals:
 
-		colnames = data.keys()
-		df = pd.DataFrame(columns=colnames)
-		
-		for _ in range(rows):
+#		colnames = data.keys()
+#		df = pd.DataFrame(columns=colnames)
+#		
+#		for _ in range(rows):
 
-			for mapping in mappings:
+#			for _ in range(columns):
 
-				st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
-				row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
-				st.write(row)
-				row.columns = colnames
-				df = pd.concat([df, row], axis=0)
-
-		st.dataframe(df)
+#		st.dataframe(df)
 
 if __name__ == '__main__':
 	
