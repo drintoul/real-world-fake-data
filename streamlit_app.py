@@ -50,9 +50,10 @@ def main():
 
 		colnames = data.keys()
 		df = pd.DataFrame(columns=colnames)
-		st.dataframe(df)
 		
 		for _ in range(rows):
+
+			st.write(fake)
 
 			st.write([exec('fake.{}()'.format(mappings[item])) for item in data.values()])
 			#row = pd.DataFrame([exec('fake.{}()'.format(mappings[item])) for item in data.values()]).T
@@ -60,7 +61,7 @@ def main():
 			#row.columns = colnames
 			#df = pd.concat([df, row], axis=0)
 
-#		st.dataframe(df)
+		st.dataframe(df)
 
 if __name__ == '__main__':
 	
