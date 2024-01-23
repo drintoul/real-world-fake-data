@@ -81,17 +81,16 @@ def main():
 			info = {}
 
 			for k,v in data.items():
-
-				st.write(k,v)
 				
 				info[k] = gen_fake(v)
 
 			info_df = pd.DataFrame([info])
 			df = pd.concat([df, info_df], ignore_index=True)
 
-		st.dataframe(df)
+		st.write('Sample DataFrame')
+		st.dataframe(df.head())
 
-	#df.to_csv('rwfd.csv', ignore_index=True)
+	df.to_csv('rwfd.csv', ignore_index=True)
 	st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
 
 if __name__ == '__main__':
