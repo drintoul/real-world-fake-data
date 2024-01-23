@@ -38,7 +38,7 @@ def main():
 
 	data = show_grid(columns, rows)
 
-	st.write(data, data.keys(), data.values())
+	st.write(data, len(data.keys()), len(data.values()))
 
 if __name__ == '__main__':
 	
