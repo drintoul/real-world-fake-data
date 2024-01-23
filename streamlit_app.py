@@ -25,9 +25,9 @@ def show_grid(columns, rows):
 		
 		col1, col2 = st.columns(2)
 		with col1:
-			names.append(st.text_input("Column Name"))
+			names.append(st.text_input("Column Name", key=col))
 		with col2:
-			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN']))
+			types.append(st.selectbox("Column Type", options=['Name', 'Address', 'SSN'], key=col))
 
 	data = dict(zip(names, types))
 	st.write(data)
