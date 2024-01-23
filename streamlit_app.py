@@ -83,6 +83,7 @@ def main():
 			for k,v in data.items():
 				
 				item = gen_fake(v)
+				st.write(item)
 				info = info.append(item)
 
 			st.write(info)
