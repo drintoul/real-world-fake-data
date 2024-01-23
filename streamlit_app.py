@@ -71,12 +71,13 @@ def main():
 	nkeys = len(keys) #sum(1 for key, value in data.items() if key)
 	nvals = len(vals) #sum(1 for key, value in data.items() if value)
 
+	st.divider()
+	
 	if nkeys == nvals:
 
 		df = pd.DataFrame(columns=keys)
 		
 		for _ in range(rows):
-			st.write(_)
 
 			info = {}
 
