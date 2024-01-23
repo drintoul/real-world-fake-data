@@ -79,15 +79,13 @@ def main():
 		for _ in range(rows):
 			st.write(_)
 
-			info = []
+			info = {}
 
 			for k,v in data.items():
 
 				st.write(k,v)
 				
-				item = gen_fake(v)
-				st.write(item)
-				info = info.append(item)
+				info[k] = gen_fake(v)
 
 			st.write(info)
 			#df = pd.concat([df, info], axis=0)
