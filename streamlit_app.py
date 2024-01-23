@@ -58,7 +58,7 @@ def main():
 	if nkeys == nvals:
 
 		st.write(keys)
-		st.write(['faker.{}()'.format(val) for val in vals])
+		st.write([exec('faker.{}()'.format(mappings[val])) for val in vals])
 		
 #		colnames = data.keys()
 #		df = pd.DataFrame(columns=colnames)
