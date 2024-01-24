@@ -95,7 +95,7 @@ def main():
 
 	with open('rwfd.csv') as f:
 		st.download_button('Download CSV', f, file_name='rwfd.csv')
-		st.write(f'Wrote {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
+		st.write(f'Writing {columns:,} columns x {rows:,} columns dataframe to rwfd.csv')
 
 if __name__ == '__main__':
 	
